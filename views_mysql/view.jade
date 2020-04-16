@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+
+    body
+        h1
+            a(href='/topic') Server Side JavaScript
+
+        ul
+            each topic in topics
+                li
+                    a(href='/topic/'+topic.id)= topic.title
+        article
+            if topic 
+                h2=topic.title
+                = topic.description
+            else
+                h2 Welcome
+                | This is server side javascript tutorial
+
+        ul
+            li
+                a(href='/topic/add') 추가
+
+            if topic
+                li
+                    a(href='/topic/'+topic.id+'/edit') 수정
+                li 
+                    a(href='/topic/'+topic.id+'/delete') 삭제

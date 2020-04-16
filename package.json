@@ -1,0 +1,23 @@
+{
+  "name": "server_side_javascript",
+  "version": "1.0.0",
+  "description": "server side javascript tutorials",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.0",
+    "jade": "^1.11.0",
+    "multer": "^1.4.2",
+    "node-mysql": "^0.4.2",
+    "session": "^0.1.0",
+    "underscore": "^1.9.2"
+  }
+}
