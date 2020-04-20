@@ -15,9 +15,15 @@
     "express-mysql-session": "^2.1.4",
     "express-session": "^1.17.0",
     "jade": "^1.11.0",
+    "md5": "^2.2.1",
     "multer": "^1.4.2",
     "node-mysql": "^0.4.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "pbkdf2-password": "^1.2.1",
     "session": "^0.1.0",
+    "sha256": "^0.2.0",
     "underscore": "^1.9.2"
   }
 }
