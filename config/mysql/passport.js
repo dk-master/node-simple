@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-var conn = require('./db')(); // return값을 받아오려면 뒤에 ()를 붙혀줘야한다.
+var conn = require('./db')(); // return값(conn)을 받아오려면 뒤에 ()를 붙혀줘야한다.
 var bkfd2Password = require("pbkdf2-password");
 var hasher = bkfd2Password();
 var passport = require("passport");

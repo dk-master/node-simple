@@ -1,5 +1,5 @@
-h1 Login
-h1
+extends ../layout
+block content
   form(action='/auth/login', ,='', method='post')
     p
       input(type='text', name='username', placeholder='username')
@@ -8,4 +8,4 @@ h1
     p
       input(type='submit')
   a(href='/auth/facebook') facebook
-  | `;
+  | `

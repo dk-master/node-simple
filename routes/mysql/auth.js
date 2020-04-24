@@ -9,7 +9,7 @@ router.post(
     passport.authenticate(
         'local',
         {
-    successRedirect: '/welcome',
+    successRedirect: '/topic',
     failureRedirect: '/auth/login',
     failureFlash: false,
     
@@ -32,7 +32,7 @@ router.post('/register',function(req,res){
                 console.log(err);
                 res.status(500);
             }else{
-                res.redirect('/welcome');
+                res.redirect('/topic');
                 // api만드는 경우는 json으로 postman에 성공했다고 보여주면 댐
             }
 
@@ -81,13 +81,19 @@ router.post('/register',function(req,res){
 // })
 
 router.get('/register', function(req,res){
-    res.render('auth/register');
+    var sql ='SELECT id,title FROM topic'; // 로그인 화면할때도 게시판이 보일 수 있게 하기위해 데이터를 가져온다.
+    conn.query(sql,function(err,topics,fields){
+    res.render('auth/register',{topics:topics});
+});
 
-})
+});
 
 router.get('/login', function(req,res){
-    res.render('auth/login');
-})
+    var sql ='SELECT id,title FROM topic'; // 로그인 화면할때도 게시판이 보일 수 있게 하기위해 데이터를 가져온다.
+    conn.query(sql,function(err,topics,fields){
+    res.render('auth/login',{topics:topics});
+});
+});
 
 
 
@@ -96,7 +102,7 @@ router.get('/logout',function(req,res){
     //delete req.session.displayName; //리다이랙션을 하는경우엔 문제가 생길 수 있다.그래서 save 시켜줘야한다.
     req.session.save(function(){
 
-        res.redirect('/welcome');
+        res.redirect('/topic');
     })
     
 })

@@ -1,4 +1,3 @@
-conn.connect();
 module.exports = function(){
     //db
 var mysql = require('mysql');
@@ -8,5 +7,7 @@ var conn = mysql.createConnection({
     password : '2488',
     database : 'dong'
 });
+
+conn.connect();
 return conn;
 }

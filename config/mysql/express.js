@@ -1,4 +1,3 @@
-
 module.exports = function(){
 var express = require("express");
 var session = require("express-session");
@@ -8,7 +7,7 @@ var MySQLStore = require('express-mysql-session')(session);
 //var sha256 = require('sha256');
 app.set('views', '../views/mysql')
 app.set('view engine', 'jade');
-
+app.use(express.static('public'));  // public 디렉토리 안에서 이 파일을 찾게된다.
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(session({

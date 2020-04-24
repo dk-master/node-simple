@@ -1,8 +1,5 @@
 
-
-
-
-require('../config/mysql/express')(app);
+var app = require('../config/mysql/express')(app);
 var passport = require('../config/mysql/passport')(app); // 매개변수를 통해서 passport.js파일에 app이라는 변수를 쓸 수 있게 보내준다.
 
 

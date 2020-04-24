@@ -1,19 +1,8 @@
-doctype html
-html
-    head
-        meta(charset='utf-8')
-
-    body
-        h1
-            a(href='/topic') Server Side JavaScript
-
-        ul
-            each topic in topics
-                li
-                    a(href='/topic/'+topic.id)= topic.title
+extends ../layout
+block content
         
         article
-             form(action='/topic/'topic.id+'/edit' method='post')
+            form(action='/topic/'+topic.id+'/edit' method='post')
                 p
                     input(type='text' name='title' value = topic.title)
                 p
